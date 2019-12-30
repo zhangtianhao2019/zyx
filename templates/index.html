@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>学员管理系统-by the5fire</title>
+</head>
+<body>
+<ul>
+    {% for student in students %}
+        <li>{{ student.name }}-{{ student.get_status_diaplay }}</li>
+    {% endfor %}
+</ul>
+#Hello {{ words }}!
+<hr/>
+<form action="/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
